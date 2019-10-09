@@ -5,6 +5,7 @@
 body {
 	background-color: $oc-gray-9;
 	overflow: hidden;
+	font-family: sans-serif;
 }
 
 
@@ -48,6 +49,29 @@ main {
 	max-height: 100vh;
 	overflow: hidden;
 	box-sizing: border-box;
+}
+
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+
+	&:hover {
+		background-color: rgba($oc-gray-0, 0.5);
+	}
+
+	.float-left,
+	.float-right {
+		visibility: hidden;
+	}
+
+	&:hover .float-left,
+	&:hover .float-right {
+		visibility: visible;
+	}
 }
 
 

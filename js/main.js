@@ -51,6 +51,9 @@ const tvDisplay = (function() {
   const footerEle = document.getElementsByTagName("footer")[0];
 
 
+  footerEle.getElementsByClassName("float-left")[0].innerText = config;
+  footerEle.removeAttribute("hidden");
+
   /*
    * SHOW CONTENT
    */
@@ -170,7 +173,7 @@ const tvDisplay = (function() {
 
       })
       .catch(function(err) {
-        
+
         if (contentList.length === 0) {
           // eslint-disable-next-line no-alert
           window.alert("Unable to load config: " + configURL + "\n" +
@@ -184,6 +187,29 @@ const tvDisplay = (function() {
   window.setInterval(configFn_refresh, 10 * 60 * 1000);
 
 
+  /*
+   * SET UP KEYS
+   */
+
+  window.addEventListener("keyup", function(keyupEvent) {
+
+    const keyCode = (keyupEvent.which || keyupEvent.keyCode);
+
+    switch (keyCode) {
+
+      case 39: // right arrow
+      case 40: // down arrow
+      case 78: // n
+        contentFn_next();
+        break;
+
+      case 82: // r
+        configFn_refresh();
+        break;
+
+      default:
+    }
+  });
 
 
   return {
