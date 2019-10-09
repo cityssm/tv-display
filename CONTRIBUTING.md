@@ -1,4 +1,10 @@
-# New Content Types
+# In general
+
+Pull requests are **definitely welcome**.
+
+- All contributions should be optimized for a 1080p display (1920 x 1080), and work on other resolutions wherever possible.
+
+## New Content Types
 
 Pull requests are **definitely welcome**.
 
@@ -14,7 +20,7 @@ When adding new content types, try to keep a few things in mind.
 - Although browser compatibility is less strict for content types, try to maintain compatibility 
   with as many popular kiosk browsers as you can.
 
-# The Display Itself
+## The Display Itself
 
 Pull requests are **definitely welcome**.
 
