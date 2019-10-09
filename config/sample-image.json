@@ -1,0 +1,15 @@
+{
+  "contentList": [{
+    "contentType": "image",
+    "displaySeconds": 20,
+    "backgroundImage": "img/bg0.jpg"
+  }, {
+    "contentType": "image",
+    "displaySeconds": 20,
+    "backgroundImage": "img/bg1.jpg"
+  }, {
+    "contentType": "image",
+    "displaySeconds": 20,
+    "backgroundImage": "img/img0.jpg"
+  }]
+}
