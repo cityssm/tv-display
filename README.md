@@ -18,3 +18,4 @@ and releasing it for the benefit of others.
 
 - [Default Configuration](https://cityssm.github.io/tv-display/)
 - [Sample clock with two display options](https://cityssm.github.io/tv-display/?config=sample-clock)
+- [Sample image slideshow](https://cityssm.github.io/tv-display/?config=sample-image)
