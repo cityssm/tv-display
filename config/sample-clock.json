@@ -1,0 +1,16 @@
+{
+  "displayDefaults": {
+    "displaySeconds": 30
+  },
+  "contentList": [{
+      "contentType": "clock",
+      "backgroundImage": "img/bg0.jpg",
+      "includeSeconds": false
+    },
+    {
+      "contentType": "clock",
+      "backgroundImage": "img/bg1.jpg",
+      "includeSeconds": true
+    }
+  ]
+}

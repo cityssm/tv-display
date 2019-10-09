@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <title>TV Screen Display</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+</head>
+
+<body>
+  <main></main>
+  <footer hidden>
+    <div class="float-left">
+      <span id="footer--ip">192.168.x.x</span> -
+      <span id="footer--config"></span>
+    </div>
+    <div class="float-right">
+      <span id="footer--status"></span>
+      <span id="footer--buttons">
+        <button class="btn btn-link btn-xs" onclick="tvDisplay.refresh()">
+          &#x21bb; Refresh Config</button>
+        <button class="btn btn-link btn-xs" onclick="tvDisplay.next()">
+          &#x25b6; Next Slide</button>
+        <button class="btn btn-link btn-xs" onclick="tvDisplay.hideFooter()">
+          &#x25bc; Hide Footer</button>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/jerrybendy--url-search-params-polyfill/index.min.js"></script>
+  <script src="js/axios--axios/axios.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

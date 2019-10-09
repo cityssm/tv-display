@@ -1,0 +1,51 @@
+@import 'necolas--normalize-css/normalize';
+@import 'yeun--open-color/open-color';
+
+
+body {
+	background-color: $oc-gray-9;
+	overflow: hidden;
+}
+
+
+/*
+ * CLEARFIX
+ */
+
+
+footer::after,
+.clearfix::after {
+	display: table;
+  clear: both;
+	content: '';
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+
+[hidden] {
+	display: none !important;
+}
+
+
+
+
+
+
+main {
+	margin: 0;
+	border-width: 0;
+	padding: 0;
+	width: 100%;
+	height: 1024px;
+	min-height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;
+}
