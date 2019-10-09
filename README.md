@@ -4,6 +4,13 @@ The City of Sault Ste. Marie uses an in-house system to display content on sever
 located at various City facilities.  The most prominent display that uses the in-house system
 is the one in the Civic Centre lobby.
 
+This is not a digital signage or kiosk operating system, but rather a simple "webpage" that can run through a series of
+content items.  We are running this solution with different configurations on several different platforms, including:
+
+- Windows XP running Internet Explorer 11
+- Raspbian (Linux on a Raspberry Pi) running Midori
+- SanicKiosk (Linux kiosk OS) running Opera 12
+
 As we expand our footprint, we are cleaning up the code associated with displaying the content,
 and releasing it for the benefit of others.
 
