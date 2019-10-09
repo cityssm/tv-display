@@ -19,7 +19,7 @@ const tvDisplay = (function() {
   let contentIndex = urlParams.get("index") || -1;
   let contentTimeoutFn = null;
 
-  const configURL = "config/" + config + ".json";
+  const configURL = "config/" + config + (config.indexOf(".") === -1 ? ".json" : "");
 
   let displayDefaults = {};
   let contentDefaults = {};
@@ -170,15 +170,18 @@ const tvDisplay = (function() {
 
       })
       .catch(function(err) {
-        // eslint-disable-next-line no-alert
-        window.alert("Unable to load config: " + configURL + "\n" +
-          "\n" +
-          err);
+        
+        if (contentList.length === 0) {
+          // eslint-disable-next-line no-alert
+          window.alert("Unable to load config: " + configURL + "\n" +
+            "\n" +
+            err);
+        }
       });
   }
 
   configFn_refresh(true);
-  window.setInterval(configFn_refresh, 60 * 1000);
+  window.setInterval(configFn_refresh, 10 * 60 * 1000);
 
 
 

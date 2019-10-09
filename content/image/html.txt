@@ -1,0 +1,1 @@
+<article class="bg-image bg-image-contain" data-js="main.min.js"></article>

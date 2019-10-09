@@ -1,6 +1,10 @@
 {
   "contentList": [{
     "contentType": "clock",
-    "displaySeconds": 3600
+    "displaySeconds": 60
+  }, {
+    "contentType": "image",
+    "displaySeconds": 20,
+    "backgroundImage": "img/img0.jpg"
   }]
 }

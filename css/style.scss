@@ -49,3 +49,22 @@ main {
 	overflow: hidden;
 	box-sizing: border-box;
 }
+
+
+
+.bg-image {
+	margin: 0;
+	background: no-repeat center center fixed;
+	padding: 0;
+	height: 100vh;
+}
+
+.bg-image-contain {
+	background-size: contain;
+	-o-background-size: contain;
+}
+
+.bg-image-cover {
+	background-size: cover;
+	-o-background-size: cover;
+}

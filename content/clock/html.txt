@@ -1,4 +1,4 @@
-<article
+<article class="bg-image bg-image-cover"
   data-js="main.min.js"
   data-css="style.min.css">
 
