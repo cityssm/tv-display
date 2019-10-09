@@ -19,6 +19,9 @@ When adding new content types, try to keep a few things in mind.
   
 - Although browser compatibility is less strict for content types, try to maintain compatibility 
   with as many popular kiosk browsers as you can.
+  
+- If you're submitting a new content type, submit a "sample" configuration with it that uses a few different options
+  so we can see it in action.
 
 ## The Display Itself
 
