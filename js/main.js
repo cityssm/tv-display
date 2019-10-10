@@ -79,7 +79,7 @@ const tvDisplay = (function() {
 
         // remove previous content
 
-        if (tvDisplay.content) {
+        if (tvDisplay.tvContent) {
 
           if (tvDisplay.tvContent.destroy) {
             tvDisplay.tvContent.destroy();

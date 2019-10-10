@@ -79,8 +79,6 @@ tvDisplay.tvContent = (function() {
       } catch (e) {
         // ignore
       }
-
-      delete window.content;
     }
   };
 }());

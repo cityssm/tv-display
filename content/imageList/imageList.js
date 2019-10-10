@@ -34,7 +34,11 @@ tvDisplay.tvContent = (function() {
       windowIntervalFn = window.setInterval(nextImage, imageMillis);
     },
     destroy: function() {
-      window.clearInterval(windowIntervalFn);
+      try {
+        window.clearInterval(windowIntervalFn);
+      } catch (e) {
+        // ignore
+      }
     }
   };
 }());
