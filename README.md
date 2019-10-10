@@ -16,6 +16,10 @@ and releasing it for the benefit of others.
 
 ## Sample Configurations
 
+The content that is displayed is driven by a config file.  Config files are written in JSON.
+They can be dynamically generated from a database table or other source, however, that implementation is not here (yet).
+
+
 - [Default Configuration](https://cityssm.github.io/tv-display/)
 - [Sample clock with two display options](https://cityssm.github.io/tv-display/?config=sample-clock)
 - [Sample image slideshow](https://cityssm.github.io/tv-display/?config=sample-image)

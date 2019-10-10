@@ -51,8 +51,9 @@ const tvDisplay = (function() {
   const footerEle = document.getElementsByTagName("footer")[0];
 
 
-  footerEle.getElementsByClassName("float-left")[0].innerText = config;
+  footerEle.getElementsByClassName("float-left")[0].innerText = "⛭ " + config;
   footerEle.removeAttribute("hidden");
+
 
   /*
    * SHOW CONTENT
@@ -167,8 +168,6 @@ const tvDisplay = (function() {
   };
 
 
-
-
   /*
    * GET THE CONFIGURATION
    */
@@ -212,6 +211,7 @@ const tvDisplay = (function() {
    * SET UP KEYS
    */
 
+
   window.addEventListener("keyup", function(keyupEvent) {
 
     const keyCode = (keyupEvent.which || keyupEvent.keyCode);
@@ -231,6 +231,13 @@ const tvDisplay = (function() {
       default:
     }
   });
+
+
+  document.getElementsByClassName("footer-btn-refresh")[0].addEventListener("click", function() {
+    configFn_refresh(false);
+  });
+
+  document.getElementsByClassName("footer-btn-next")[0].addEventListener("click", contentFn_next);
 
 
   return {
