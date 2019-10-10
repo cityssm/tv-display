@@ -1,0 +1,10 @@
+{
+  "contentList": [
+    {
+      "contentType": "imageList",
+      "displaySeconds": 60,
+      "imageSeconds": 8,
+      "backgroundImages": ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"]
+    }
+  ]
+}

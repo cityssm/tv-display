@@ -10,6 +10,6 @@
   }, {
     "contentType": "video",
     "displaySeconds": 30,
-    "sourceList": ["img/vid0.mp4"]
+    "sourceList": ["img/vid0.webm", "img/vid0.mp4"]
   }]
 }
