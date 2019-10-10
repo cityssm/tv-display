@@ -1,0 +1,3 @@
+<article data-css="video.min.css" data-js="video.min.js">
+  <video muted></video>
+</article>

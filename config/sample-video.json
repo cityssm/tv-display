@@ -1,0 +1,8 @@
+{
+  "contentList": [{
+    "contentType": "video",
+    "displaySeconds": 60,
+    "sourceList": ["img/vid0.mp4"],
+    "muted": true
+  }]
+}
