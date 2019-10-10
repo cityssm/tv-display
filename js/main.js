@@ -29,11 +29,11 @@ const tvDisplay = (function() {
 
     let propertyValue = contentJSON[propertyName];
 
-    if (propertyValue === null && contentDefaults[contentJSON.contentType]) {
+    if (!propertyValue && contentDefaults[contentJSON.contentType]) {
       propertyValue = contentDefaults[contentJSON.contentType][propertyName];
     }
 
-    if (propertyValue === null) {
+    if (!propertyValue) {
       propertyValue = displayDefaults[propertyName];
     }
 
@@ -99,10 +99,28 @@ const tvDisplay = (function() {
 
         if (articleEle) {
 
+          // load content specific css
+
           if (articleEle.getAttribute("data-css") && articleEle.getAttribute("data-css") !== "") {
             contentContainerEle.insertAdjacentHTML("afterbegin",
               "<link rel=\"stylesheet\" type=\"text/css\" href=\"content/" + contentJSON.contentType + "/" + articleEle.getAttribute("data-css") + "\" />");
           }
+
+          // set styles that apply on all content types
+
+          const fontFamily = getContentProperty(contentJSON, "fontFamily");
+
+          if (fontFamily) {
+            articleEle.style.fontFamily = fontFamily;
+          }
+
+          const backgroundImage = getContentProperty(contentJSON, "backgroundImage");
+
+          if (backgroundImage) {
+            articleEle.style.backgroundImage = "url('" + backgroundImage + "')";
+          }
+
+          // load content specific javascript
 
           if (articleEle.getAttribute("data-js") && articleEle.getAttribute("data-js") !== "") {
 
@@ -123,6 +141,7 @@ const tvDisplay = (function() {
         contentTimeoutFn = window.setTimeout(contentFn_next, displayMillis);
       })
       .catch(function() {
+        // eslint-disable-next-line no-alert
         window.alert("Unable to load content: " + contentURL);
       });
   };
@@ -165,7 +184,9 @@ const tvDisplay = (function() {
       })
       .then(function(responseJSON) {
 
-        contentList = responseJSON.contentList;
+        contentList = responseJSON.contentList || [];
+        contentDefaults = responseJSON.contentDefaults || {};
+        displayDefaults = responseJSON.displayDefaults || {};
 
         if (doContentDisplay) {
           contentFn_next();

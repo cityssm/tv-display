@@ -52,6 +52,21 @@ main {
 }
 
 
+article {
+	margin: 0;
+	background: no-repeat center center fixed;
+	background-size: cover;
+	-o-background-size: cover;
+	padding: 0;
+	height: 100vh;
+}
+
+.bg-image-contain {
+	background-size: contain;
+	-o-background-size: contain;
+}
+
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -72,23 +87,4 @@ footer {
 	&:hover .float-right {
 		visibility: visible;
 	}
-}
-
-
-
-.bg-image {
-	margin: 0;
-	background: no-repeat center center fixed;
-	padding: 0;
-	height: 100vh;
-}
-
-.bg-image-contain {
-	background-size: contain;
-	-o-background-size: contain;
-}
-
-.bg-image-cover {
-	background-size: cover;
-	-o-background-size: cover;
 }

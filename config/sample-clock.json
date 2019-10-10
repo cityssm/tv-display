@@ -1,6 +1,7 @@
 {
   "displayDefaults": {
-    "displaySeconds": 30
+    "displaySeconds": 30,
+    "fontFamily": "Barlow, sans-serif"
   },
   "contentList": [{
       "contentType": "clock",

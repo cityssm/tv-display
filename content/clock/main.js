@@ -67,12 +67,6 @@ tvDisplay.tvContent = (function() {
 
       includeSeconds = tvDisplay.getContentProperty(contentJSON, "includeSeconds") || false;
 
-      // initialize background
-
-      let backgroundImage = tvDisplay.getContentProperty(contentJSON, "backgroundImage") || "img/bg0.jpg";
-
-      tvDisplay.contentContainer.getElementsByTagName("article")[0].style.backgroundImage = "url('" + backgroundImage + "')";
-
       // refresh the clock
 
       updateClockDisplay();
