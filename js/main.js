@@ -29,11 +29,11 @@ const tvDisplay = (function() {
 
     let propertyValue = contentJSON[propertyName];
 
-    if (propertyValue === null && contentDefaults[contentJSON.contentType]) {
+    if ((propertyValue === null || propertyValue === undefined) && contentDefaults[contentJSON.contentType]) {
       propertyValue = contentDefaults[contentJSON.contentType][propertyName];
     }
 
-    if (propertyValue === null) {
+    if (propertyValue === null || propertyValue === undefined) {
       propertyValue = displayDefaults[propertyName];
     }
 

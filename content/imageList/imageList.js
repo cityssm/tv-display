@@ -29,8 +29,12 @@ tvDisplay.tvContent = (function() {
       const imageMillis = (tvDisplay.getContentProperty(contentJSON, "imageSeconds") || 10) * 1000;
 
       const fn_start = function() {
-        nextImage();
-        windowIntervalFn = window.setInterval(nextImage, imageMillis);
+        if (backgroundImages.length === 0) {
+          tvDisplay.next();
+        } else {
+          nextImage();
+          windowIntervalFn = window.setInterval(nextImage, imageMillis);
+        }
       };
 
       let backgroundImagesValue = tvDisplay.getContentProperty(contentJSON, "backgroundImages");
@@ -38,8 +42,8 @@ tvDisplay.tvContent = (function() {
       if (backgroundImagesValue.constructor === Array) {
         backgroundImages = backgroundImagesValue;
         fn_start();
-      }
-      else {
+        
+      } else {
         axios.get(backgroundImagesValue, {
             responseType: "json",
             data: {
