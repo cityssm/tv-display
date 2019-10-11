@@ -176,7 +176,10 @@ const tvDisplay = (function() {
   function configFn_refresh(doContentDisplay) {
 
     axios.get(configURL, {
-        responseType: "json"
+        responseType: "json",
+        data: {
+          _: Date.now()
+        }
       })
       .then(function(response) {
         return response.data;
