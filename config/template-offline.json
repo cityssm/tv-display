@@ -1,0 +1,29 @@
+{
+  "contentDefaults": {
+    "clock": {
+      "displaySeconds": 45,
+      "backgroundImage": "img/bg0.jpg",
+      "includeSeconds": false
+    },
+    "imageList": {
+      "displaySeconds": 3600,
+      "imageSeconds": 10
+    }
+  },
+  "contentList": [{
+    "contentType": "clock"
+  }, {
+    "contentType": "imageList",
+    "backgroundImages": "img/puppies/files.json"
+  }, {
+    "contentType": "clock"
+  }, {
+    "contentType": "imageList",
+    "backgroundImages": "img/puppies/files.json"
+  }, {
+    "contentType": "clock"
+  }, {
+    "contentType": "imageList",
+    "backgroundImages": "img/puppies/files.json"
+  }]
+}

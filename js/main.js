@@ -19,7 +19,10 @@ const tvDisplay = (function() {
   let contentIndex = urlParams.get("index") || -1;
   let contentTimeoutFn = null;
 
-  const configURL = "config/" + config + (config.indexOf(".") === -1 ? ".json" : "");
+  const configURL =
+    (config.indexOf("/") === -1 ? "config/" : "") +
+    config +
+    (config.indexOf(".") === -1 ? ".json" : "");
 
   let displayDefaults = {};
   let contentDefaults = {};
@@ -27,17 +30,19 @@ const tvDisplay = (function() {
 
   function getContentProperty(contentJSON, propertyName) {
 
-    let propertyValue = contentJSON[propertyName];
-
-    if ((propertyValue === null || propertyValue === undefined) && contentDefaults[contentJSON.contentType]) {
-      propertyValue = contentDefaults[contentJSON.contentType][propertyName];
+    if (contentJSON.hasOwnProperty(propertyName)) {
+      return contentJSON[propertyName];
     }
 
-    if (propertyValue === null || propertyValue === undefined) {
-      propertyValue = displayDefaults[propertyName];
+    if (contentDefaults.hasOwnProperty(contentJSON.contentType) && contentDefaults[contentJSON.contentType].hasOwnProperty(propertyName)) {
+      return contentDefaults[contentJSON.contentType][propertyName];
     }
 
-    return propertyValue;
+    if (displayDefaults.hasOwnProperty(propertyName)) {
+      return displayDefaults[propertyName];
+    }
+
+    return null;
   }
 
 
