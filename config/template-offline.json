@@ -11,19 +11,25 @@
     }
   },
   "contentList": [{
-    "contentType": "clock"
-  }, {
-    "contentType": "imageList",
-    "backgroundImages": "img/puppies/files.json"
-  }, {
-    "contentType": "clock"
-  }, {
-    "contentType": "imageList",
-    "backgroundImages": "img/puppies/files.json"
-  }, {
-    "contentType": "clock"
-  }, {
-    "contentType": "imageList",
-    "backgroundImages": "img/puppies/files.json"
-  }]
+      "contentType": "clock"
+    },
+    {
+      "contentType": "imageList",
+      "backgroundImages": "img/puppies/files.json"
+    },
+    {
+      "contentType": "clock"
+    },
+    {
+      "contentType": "imageList",
+      "backgroundImages": "img/puppies/files.json"
+    },
+    {
+      "contentType": "clock"
+    },
+    {
+      "contentType": "imageList",
+      "backgroundImages": "img/puppies/files.json"
+    }
+  ]
 }
