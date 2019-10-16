@@ -46,7 +46,7 @@ tvDisplay.tvContent = (function() {
         fn_start();
 
       } else {
-        axios.get(backgroundImagesValue, {
+        axios.get(remoteURL + backgroundImagesValue, {
             responseType: "json",
             data: {
               _: Date.now()
