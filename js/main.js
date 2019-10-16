@@ -72,7 +72,11 @@ const tvDisplay = (function() {
 
     const contentJSON = contentList[contentIndex];
 
-    const contentURL = "content/" + contentJSON.contentType + "/html.txt";
+    const remoteURL = getContentProperty(contentJSON, "remoteURL");
+
+    const contentURL_root = (remoteURL ? remoteURL : "") + "content/" + contentJSON.contentType;
+
+    const contentURL = contentURL_root + "/html.txt";
 
     axios.get(contentURL, {
         responseType: "text"
@@ -109,7 +113,7 @@ const tvDisplay = (function() {
 
           if (articleEle.getAttribute("data-css") && articleEle.getAttribute("data-css") !== "") {
             contentContainerEle.insertAdjacentHTML("afterbegin",
-              "<link rel=\"stylesheet\" type=\"text/css\" href=\"content/" + contentJSON.contentType + "/" + articleEle.getAttribute("data-css") + "\" />");
+              "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + contentURL_root + "/" + articleEle.getAttribute("data-css") + "\" />");
           }
 
           // set styles that apply on all content types
@@ -123,7 +127,7 @@ const tvDisplay = (function() {
           const backgroundImage = getContentProperty(contentJSON, "backgroundImage");
 
           if (backgroundImage) {
-            articleEle.style.backgroundImage = "url('" + backgroundImage + "')";
+            articleEle.style.backgroundImage = "url('" + contentURL_root + "/../../" + backgroundImage + "')";
           }
 
           // load content specific javascript
@@ -131,7 +135,7 @@ const tvDisplay = (function() {
           if (articleEle.getAttribute("data-js") && articleEle.getAttribute("data-js") !== "") {
 
             const scriptEle = document.createElement("script");
-            scriptEle.src = "content/" + contentJSON.contentType + "/" + articleEle.getAttribute("data-js");
+            scriptEle.src = contentURL_root + "/" + articleEle.getAttribute("data-js");
             scriptEle.onload = function() {
 
               if (tvDisplay.tvContent && tvDisplay.tvContent.init) {

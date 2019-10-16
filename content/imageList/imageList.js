@@ -7,6 +7,7 @@ tvDisplay.tvContent = (function() {
 
   const articleEle = tvDisplay.contentContainer.getElementsByTagName("article")[0];
 
+  let remoteURL = "";
   let backgroundImageFolderPrefix = "";
   let backgroundImages = [];
   let currentIndex = -1;
@@ -18,13 +19,14 @@ tvDisplay.tvContent = (function() {
     if (currentIndex >= backgroundImages.length) {
       tvDisplay.next();
     } else {
-
-      articleEle.style.backgroundImage = "url('" + backgroundImageFolderPrefix + backgroundImages[currentIndex] + "')";
+      articleEle.style.backgroundImage = "url('" + remoteURL + backgroundImageFolderPrefix + backgroundImages[currentIndex] + "')";
     }
   }
 
   return {
     init: function(contentJSON) {
+
+      remoteURL = tvDisplay.getContentProperty(contentJSON, "remoteURL") || "";
 
       const imageMillis = (tvDisplay.getContentProperty(contentJSON, "imageSeconds") || 10) * 1000;
 
@@ -42,7 +44,7 @@ tvDisplay.tvContent = (function() {
       if (backgroundImagesValue.constructor === Array) {
         backgroundImages = backgroundImagesValue;
         fn_start();
-        
+
       } else {
         axios.get(backgroundImagesValue, {
             responseType: "json",
@@ -54,8 +56,11 @@ tvDisplay.tvContent = (function() {
             return response.data;
           })
           .then(function(responseJSON) {
+
             backgroundImageFolderPrefix = backgroundImagesValue.substring(0, backgroundImagesValue.length - 10);
+
             backgroundImages = responseJSON.backgroundImages;
+
             fn_start();
           });
       }

@@ -1,0 +1,19 @@
+{
+  "displayDefaults": {
+    "fontFamily": "Barlow, sans-serif",
+    "remoteURL": "https://cityssm.github.io/tv-display/"
+  },
+  "contentList": [{
+      "contentType": "clock",
+      "displaySeconds": 30,
+      "backgroundImage": "img/bg0.jpg",
+      "includeSeconds": false
+    },
+    {
+      "contentType": "imageList",
+      "displaySeconds": 60,
+      "backgroundImages": "img/puppies/files.json",
+      "imageSeconds": 8
+    }
+  ]
+}
