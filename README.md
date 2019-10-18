@@ -30,5 +30,5 @@ They can be dynamically generated from a database table or other source, however
 The TV Display application can be run from pretty much any web server.
 The application can be viewed from pretty much any web browser.
 
-That being said, the process to [run the application using Linux Mint has been documented](docs/SETUP-linuxMint.md).
-Documentation for the Raspberry Pi is coming.
+To avoid overloading this repository with heavy screenshots,
+documentation can be found in its own repository, [cityssm/tv-display-docs](https://github.com/cityssm/tv-display-docs).
