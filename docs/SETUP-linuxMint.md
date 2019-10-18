@@ -177,7 +177,7 @@ and clicking the Run Now "gears" button.
 
 ## Restart the Computer
 
-One restart, the computer should load up the display with the configuration you copied over.
+On restart, the computer should load up the display with the configuration you copied over.
 Use <kbd>Alt</kbd> <kbd>F4</kbd> to leave the full screen Chromium browser.
 
 Now it's time to start customizing your content with the `config.json` file.
