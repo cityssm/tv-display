@@ -62,6 +62,16 @@ tvDisplay.tvContent = (function() {
             backgroundImages = responseJSON.backgroundImages;
 
             fn_start();
+          })
+          .catch(function() {
+            try {
+              window.console.error("imageList: Unable to load " + remoteURL + backgroundImagesValue);
+              
+            } catch (e) {
+              // ignore
+            }
+
+            tvDisplay.next();
           });
       }
 
