@@ -151,8 +151,14 @@ const tvDisplay = (function() {
         contentTimeoutFn = window.setTimeout(contentFn_next, displayMillis);
       })
       .catch(function() {
-        // eslint-disable-next-line no-alert
-        window.alert("Unable to load content: " + contentURL);
+
+        try {
+          window.console.error("Unable to load content: " + contentURL);
+        } catch (e) {
+          // ignore
+        }
+
+        contentFn_next();
       });
   };
 
