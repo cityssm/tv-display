@@ -28,14 +28,14 @@ tvDisplay.tvContent = (function() {
 
       remoteURL = tvDisplay.getContentProperty(contentJSON, "remoteURL") || "";
 
-      const imageMillis = (tvDisplay.getContentProperty(contentJSON, "imageSeconds") || 10) * 1000;
+      const slideMillis = (tvDisplay.getContentProperty(contentJSON, "slideSeconds") || 10) * 1000;
 
       const fn_start = function() {
         if (backgroundImages.length === 0) {
           tvDisplay.next();
         } else {
           nextImage();
-          windowIntervalFn = window.setInterval(nextImage, imageMillis);
+          windowIntervalFn = window.setInterval(nextImage, slideMillis);
         }
       };
 
@@ -66,7 +66,7 @@ tvDisplay.tvContent = (function() {
           .catch(function() {
             try {
               window.console.error("imageList: Unable to load " + remoteURL + backgroundImagesValue);
-              
+
             } catch (e) {
               // ignore
             }

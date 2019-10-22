@@ -12,8 +12,8 @@
     {
       "contentType": "imageList",
       "displaySeconds": 60,
-      "backgroundImages": "img/puppies/files.json",
-      "imageSeconds": 8
+      "slideSeconds": 8,
+      "backgroundImages": "img/puppies/files.json"
     }
   ]
 }

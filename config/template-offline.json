@@ -7,7 +7,7 @@
     },
     "imageList": {
       "displaySeconds": 3600,
-      "imageSeconds": 10
+      "slideSeconds": 10
     }
   },
   "contentList": [{

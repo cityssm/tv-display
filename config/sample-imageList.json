@@ -2,7 +2,7 @@
   "contentDefaults": {
     "imageList": {
       "displaySeconds": 60,
-      "imageSeconds": 8
+      "slideSeconds": 8
     }
   },
   "contentList": [{

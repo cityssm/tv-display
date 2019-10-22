@@ -256,6 +256,12 @@ const tvDisplay = (function() {
     next: contentFn_next,
     refresh: configFn_refresh,
     getContentProperty: getContentProperty,
-    contentContainer: contentContainerEle
+    contentContainer: contentContainerEle,
+
+    sanitizeText: function(possibleHTML) {
+      const divEle = document.createElement("div");
+      divEle.innerHTML = possibleHTML;
+      return divEle.innerText;
+    }
   };
 }());
