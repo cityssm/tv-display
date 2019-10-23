@@ -56,7 +56,7 @@ const tvDisplay = (function() {
   const footerEle = document.getElementsByTagName("footer")[0];
 
 
-  footerEle.getElementsByClassName("float-left")[0].innerHTML = "&#x2699; " + config;
+  footerEle.getElementsByClassName("float-left")[0].innerHTML = "{ " + config + " }";
   footerEle.removeAttribute("hidden");
 
 
