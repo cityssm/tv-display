@@ -258,6 +258,20 @@ const tvDisplay = (function() {
   document.getElementsByClassName("footer-btn-next")[0].addEventListener("click", contentFn_next);
 
 
+  /*
+   * SET UP COMPLETE RESET
+   */
+
+  function displayFn_reset() {
+    window.location.reload(true);
+  }
+
+  let resetTime = new Date(Date.now() + (24 * 60 * 60 * 1000));
+  resetTime.setHours(3);
+
+  window.setTimeout(displayFn_reset, (resetTime.getTime() - Date.now()));
+
+
   return {
     next: contentFn_next,
     refresh: configFn_refresh,
