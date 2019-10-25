@@ -1,0 +1,16 @@
+<article data-js="welcome.min.js" data-css="welcome.min.css">
+  <div>
+    <h1 class="animated jackInTheBox">Welcome to your new display!</h1>
+    <p class="animated zoomInUp slow strong">
+      To get started,<br />
+      point at your configuration.
+    </p>
+    <p class="animated flipInX delay-2s small">
+      For example<br />
+      http://localhost/tv-display/?config=/tv-assets/config.json
+    </p>
+    <p class="text-right smaller">
+      github.com/cityssm/tv-display
+    </p>
+  </div>
+</article>

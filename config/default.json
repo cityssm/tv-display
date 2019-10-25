@@ -1,20 +1,7 @@
 {
   "contentList": [{
-    "contentType": "clock",
-    "backgroundImage": "img/bg0.jpg",
-    "displaySeconds": 30
-  }, {
-    "contentType": "image",
-    "displaySeconds": 20,
-    "backgroundImage": "img/img0.jpg"
-  }, {
-    "contentType": "video",
-    "displaySeconds": 30,
-    "sourceList": ["img/vid0.webm", "img/vid0.mp4"]
-  }, {
-    "contentType": "imageList",
-    "displaySeconds": 60,
-    "slideSeconds": 8,
-    "backgroundImages": "img/puppies/files.json"
-  }]
+      "contentType": "welcome",
+      "displaySeconds": 30
+    }
+  ]
 }
