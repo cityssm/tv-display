@@ -1,5 +1,6 @@
 @import 'necolas--normalize-css/normalize';
 @import 'yeun--open-color/open-color';
+@import 'daneden--animate-css/animate';
 
 
 body {
@@ -57,14 +58,12 @@ article {
 	margin: 0;
 	background: no-repeat center center fixed;
 	background-size: cover;
-	-o-background-size: cover;
-	height: 100vh;
 	padding: 0;
+	height: 100vh;
 }
 
 .bg-image-contain {
 	background-size: contain;
-	-o-background-size: contain;
 }
 
 
