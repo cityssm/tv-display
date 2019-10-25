@@ -1,11 +1,14 @@
 {
   "displayDefaults": {
     "fontFamily": "Barlow, sans-serif",
-    "remoteURL": "../tv-display-ssm-public/"
+    "remoteURL": "../tv-display-ssm-public/",
+    "displaySeconds": 30
   },
   "contentList": [{
-      "contentType": "clock-transit",
-      "displaySeconds": 30
+      "contentType": "clock-transit"
+    },
+    {
+      "contentType": "cityweb-stayConnected"
     }
   ]
 }
