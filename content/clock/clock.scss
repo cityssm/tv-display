@@ -1,5 +1,6 @@
-article {
+.content--clock {
   color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 
   div {
     position: fixed;
@@ -10,14 +11,14 @@ article {
   h1 {
     margin: 0;
     padding: 0;
-    font-size: 25vh;
+    font-size: 14vw;
     font-weight: 800;
     font-variant-numeric: tabular-nums;
   }
 
   h2 {
     margin: 0;
-    font-size: 10vh;
+    font-size: 6vw;
     font-weight: 600;
   }
 }
