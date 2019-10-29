@@ -60,11 +60,14 @@ article {
 	background-size: cover;
 	padding: 0;
 	height: 100vh;
+	font-size: 6vw;
 }
 
 .bg-image-contain {
 	background-size: contain;
 }
+
+
 
 
 footer {
@@ -100,4 +103,41 @@ footer {
 	background-color: $oc-gray-0;
 	padding: 5px 10px;
 	color: $oc-gray-9;
+}
+
+
+
+/*
+ * BOOTSTRAP INSPIRED CLASSES
+ */
+
+
+$spacer: 0.25em;
+
+
+.m-0 {
+	margin: 0;
+}
+
+.mt-1 {
+	margin-top: $spacer;
+}
+
+.mr-1 {
+	margin-right: $spacer;
+}
+
+.mb-1 {
+	margin-bottom: $spacer;
+}
+
+.ml-1 {
+	margin-left: $spacer;
+}
+
+
+
+
+.text-center {
+	text-align: center;
 }

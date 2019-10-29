@@ -1,0 +1,20 @@
+{
+  "displayDefaults": {
+    "displaySeconds": 20
+  },
+  "contentList": [{
+      "contentType": "html",
+      "backgroundImage": "img/bg2.jpg",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "innerHTML": "<h1 class=\"m-0 text-center animated delay-1s tada\">Coming Soon</h1><h2 class=\"m-0 text-center animated delay-3s shake\">To a theatre near you!</h2>"
+    },
+    {
+      "contentType": "html",
+      "backgroundImage": "img/puppies/img1.jpg",
+      "alignItems": "flex-end",
+      "justifyContent": "flex-start",
+      "innerHTML": "<h3 class=\"m-0 ml-1 text-center animated delay-1s bounce\">Woof!  Woof!</h3>"
+    }
+  ]
+}
