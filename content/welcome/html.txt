@@ -1,4 +1,4 @@
-<article data-js="welcome.min.js" data-css="welcome.min.css">
+<article class="content--welcome" data-css="welcome.min.css">
   <div>
     <h1 class="animated jackInTheBox">Welcome to your new display!</h1>
     <p class="animated zoomInUp slow strong">
