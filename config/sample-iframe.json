@@ -1,0 +1,22 @@
+{
+  "displayDefaults": {
+    "displaySeconds": 45
+  },
+  "contentList": [{
+      "contentType": "iframe",
+      "source": "https://codepen.io/al-ro/full/BaaBage"
+    },
+    {
+      "contentType": "iframe",
+      "source": "https://codepen.io/al-ro/full/QWWLZPx"
+    },
+    {
+      "contentType": "iframe",
+      "source": "https://codepen.io/al-ro/full/vYYYRaJ"
+    },
+    {
+      "contentType": "iframe",
+      "source": "https://codepen.io/al-ro/full/xxxxgxK"
+    }
+  ]
+}
