@@ -1,4 +1,11 @@
 <%
+  ' files.json generator - ASP version
+  ' ----------------------------------
+  ' if you are hosting folders of images on an IIS web server
+  ' simply place this asp file in the directory
+  ' to generate imageList compatible files.json output
+
+
   response.contenttype = "application/json"
 
   response.write ("{""backgroundImages"":[")
@@ -13,7 +20,7 @@
 
     fileExtension = right(currentFile.Name, 4)
 
-    if (fileExtension = ".jpg" or fileExtension = "png") then
+    if (fileExtension = ".jpg" or fileExtension = ".png") then
 
       if (doComma) then
         response.write (",")
