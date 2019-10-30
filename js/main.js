@@ -127,7 +127,14 @@ const tvDisplay = (function() {
           const backgroundImage = getContentProperty(contentJSON, "backgroundImage");
 
           if (backgroundImage) {
-            articleEle.style.backgroundImage = "url('" + contentURL_root + "/../../" + backgroundImage + "')";
+
+            if (backgroundImage.indexOf("://") === -1) {
+              articleEle.style.backgroundImage = "url('" + contentURL_root + "/../../" + backgroundImage + "')";
+            }
+            else {
+              articleEle.style.backgroundImage = "url('" + backgroundImage + "')";
+
+            }
           }
 
           // load content specific javascript
