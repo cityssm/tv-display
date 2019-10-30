@@ -57,7 +57,7 @@ tvDisplay.tvContent = (function() {
           })
           .then(function(responseJSON) {
 
-            backgroundImageFolderPrefix = backgroundImagesValue.substring(0, backgroundImagesValue.length - 10);
+            backgroundImageFolderPrefix = backgroundImagesValue.substring(0, backgroundImagesValue.lastIndexOf("/") + 1);
 
             backgroundImages = responseJSON.backgroundImages;
 
