@@ -16,10 +16,11 @@ tvDisplay.tvContent = (function() {
 
     currentIndex += 1;
 
+
     if (currentIndex >= backgroundImages.length) {
       tvDisplay.next();
     } else {
-      articleEle.style.backgroundImage = "url('" + remoteURL + backgroundImageFolderPrefix + backgroundImages[currentIndex].replace(/\'/g, "\'") + "')";
+      articleEle.style.backgroundImage = "url('" + remoteURL + backgroundImageFolderPrefix + backgroundImages[currentIndex].replace(/\'/g, "\\'") + "')";
     }
   }
 
