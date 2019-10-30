@@ -19,7 +19,7 @@ tvDisplay.tvContent = (function() {
     if (currentIndex >= backgroundImages.length) {
       tvDisplay.next();
     } else {
-      articleEle.style.backgroundImage = "url('" + remoteURL + backgroundImageFolderPrefix + backgroundImages[currentIndex] + "')";
+      articleEle.style.backgroundImage = "url('" + remoteURL + backgroundImageFolderPrefix + backgroundImages[currentIndex].replace(/\'/g, "\'") + "')";
     }
   }
 
