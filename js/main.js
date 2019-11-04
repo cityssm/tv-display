@@ -199,7 +199,7 @@ const tvDisplay = (function() {
 
     axios.get(configURL, {
         responseType: "json",
-        data: {
+        params: {
           _: Date.now()
         }
       })
