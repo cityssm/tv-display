@@ -1,0 +1,3 @@
+<article class="content--youtube" data-js="youtube.min.js">
+  <div id="youtube-player"></div>
+</article>
