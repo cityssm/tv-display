@@ -7,3 +7,9 @@
 
 **slideSeconds**
 - The number of seconds to display each image.
+
+**maxSlideCount**
+- The maximum number of images to display before moving on to the next content.
+
+**shuffleBackgroundImages**
+- When set to `true`, the order of the images will be randomized.
