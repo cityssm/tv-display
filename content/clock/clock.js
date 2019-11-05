@@ -56,7 +56,7 @@ tvDisplay.tvContent = (function() {
       (includeSeconds ? ":" + padNumber(t.getSeconds()) : "") +
       " " + tod;
 
-    dateEle.innerHTML = dayOfWeekArray[t.getDay()] + ", " + monthArray[t.getMonth()] + " " + t.getDate() + ", " + t.getFullYear();
+    dateEle.innerHTML = dayOfWeekArray[t.getDay()] + ",<br /><span class=\"text-nowrap\">" + monthArray[t.getMonth()] + " " + t.getDate() + ",</span> " + t.getFullYear();
   }
 
 
