@@ -1,1 +1,1 @@
-<article class="bg-image-contain"></article>
+<article class="content--image bg-image-contain"></article>
