@@ -1,3 +1,3 @@
 <article class="content--iframe" data-js="iframe.min.js" data-css="iframe.min.css">
-  <iframe></iframe>
+  <iframe scrolling="no"></iframe>
 </article>
