@@ -80,7 +80,8 @@ tvDisplay.tvContent = (function() {
             responseType: "json",
             params: {
               _: Date.now()
-            }
+            },
+            timeout: 3000
           })
           .then(function(response) {
             return response.data;
