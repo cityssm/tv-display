@@ -12,6 +12,12 @@
       "contentType": "clock",
       "backgroundImage": "img/bg1.jpg",
       "includeSeconds": true
+    },
+    {
+      "contentType": "clock",
+      "backgroundImage": "img/bg2.jpg",
+      "includeSeconds": true,
+      "unixTimestampURL": "https://apps.saultstemarie.ca/unix-timestamp/seconds.asp"
     }
   ]
 }

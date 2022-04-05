@@ -1,10 +1,32 @@
-/* global window, tvDisplay */
+/* global window, tvDisplay, axios */
 
 tvDisplay.tvContent = (function() {
   "use strict";
 
   let windowIntervalFn = null;
   let includeSeconds = false;
+
+  let unixTimestampURL = "";
+  let timeOffsetMilliseconds = 0;
+
+  function getTimeOffset() {
+
+    if (unixTimestampURL === "") {
+      return;
+    }
+
+    axios.get(unixTimestampURL, {
+        responseType: "text"
+      })
+      .then(function(response) {
+        return response.data;
+      })
+      .then(function(unixTimestamp) {
+        try {
+          timeOffsetMilliseconds = Date.now() - (Number.parseInt(unixTimestamp) * 1000);
+        } catch (_e) {}
+      });
+  }
 
   const monthArray = ["January",
     "February",
@@ -39,7 +61,7 @@ tvDisplay.tvContent = (function() {
 
   function updateClockDisplay() {
 
-    let t = new Date(),
+    let t = new Date(Date.now() - timeOffsetMilliseconds),
       tod = "AM",
       hr = t.getHours();
 
@@ -66,6 +88,10 @@ tvDisplay.tvContent = (function() {
       // get settings
 
       includeSeconds = tvDisplay.getContentProperty(contentJSON, "includeSeconds") || false;
+
+      unixTimestampURL = tvDisplay.getContentProperty(contentJSON, "unixTimestampURL") || "";
+
+      getTimeOffset();
 
       // refresh the clock
 

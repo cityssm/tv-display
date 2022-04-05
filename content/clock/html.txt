@@ -1,4 +1,4 @@
-<article class="content--clock" data-js="clock.min.js" data-css="clock.min.css">
+<article class="content--clock" data-js="clock.js" data-css="clock.min.css">
   <div>
     <h1></h1>
     <h2></h2>
