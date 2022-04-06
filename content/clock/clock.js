@@ -16,14 +16,15 @@ tvDisplay.tvContent = (function() {
     }
 
     axios.get(unixTimestampURL, {
-        responseType: "text"
+        responseType: "text",
+        withCredentials: false
       })
       .then(function(response) {
         return response.data;
       })
       .then(function(unixTimestamp) {
         try {
-          timeOffsetMilliseconds = Date.now() - (Number.parseInt(unixTimestamp) * 1000);
+          timeOffsetMilliseconds = Date.now() - (Number.parseInt(unixTimestamp) * 1000) - (Date.getTimezoneOffset() * 60000);
         } catch (_e) {}
       });
   }
