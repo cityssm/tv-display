@@ -11,7 +11,9 @@
   font-size: 24vw;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
+  
+  background-color: rgba(0, 0, 0, 0.7);
 
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 8px;
   -webkit-text-stroke-color: black;
 }
