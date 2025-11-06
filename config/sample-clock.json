@@ -4,6 +4,9 @@
     "fontFamily": "Barlow, sans-serif"
   },
   "contentList": [{
+      "contentType": "bigClock",
+      "backgroundImage": "img/bg1.jpg"
+    }, {
       "contentType": "clock",
       "backgroundImage": "img/bg0.jpg",
       "includeSeconds": false
