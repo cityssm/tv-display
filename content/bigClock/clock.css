@@ -1,14 +1,16 @@
 .content--clock div {
-  position: fixed;
-  top: 20vh;
-  width: 100vw;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justift-content: center;
 }
 
 .content--clock h1 {
   margin: 0;
   padding: 0;
+  width: 100%;
   text-align: center;
-  font-size: 24vw;
+  font-size: 30vw;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   

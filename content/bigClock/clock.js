@@ -76,7 +76,7 @@ tvDisplay.tvContent = (function () {
       hr = 12;
     }
 
-    timeEle.innerHTML = hr + ":" + padNumber(t.getMinutes()) + " " + tod;
+    timeEle.innerHTML = hr + ":" + padNumber(t.getMinutes());
   }
 
   return {
